@@ -1,0 +1,141 @@
+{
+  "@context" : {
+    "WineType" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+    },
+    "Winery" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+    },
+    "WineTaste" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineTaste"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "wine" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#wine"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "hasMaker" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasMaker",
+      "@type" : "@id"
+    },
+    "hasWineDescription" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasWineDescription",
+      "@type" : "@id"
+    },
+    "BodyScore" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#BodyScore"
+    },
+    "puckerValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#puckerValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "AcidityScore" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#AcidityScore"
+    },
+    "Vintage" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vintage"
+    },
+    "Price" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Price"
+    },
+    "hasType" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasType",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "priceValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#priceValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "reviewValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#reviewValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "hasBody" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasBody",
+      "@type" : "@id"
+    },
+    "CountryOrigin" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#CountryOrigin"
+    },
+    "bodyScoreValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#bodyScoreValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "ratingValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#ratingValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "WineName" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+    },
+    "hasVintageYear" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasVintageYear",
+      "@type" : "@id"
+    },
+    "Tartness" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tartness"
+    },
+    "yearValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#yearValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "VintageYear" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+    },
+    "locatedIn" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#locatedIn",
+      "@type" : "@id"
+    },
+    "WineDescriptor" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineDescriptor"
+    },
+    "UsersRating" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#UsersRating"
+    },
+    "tartnessValue" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#tartnessValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Pucker" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pucker"
+    },
+    "nearRegion" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#nearRegion",
+      "@type" : "@id"
+    },
+    "NumReviews" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#NumReviews"
+    },
+    "Region" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+    },
+    "WineBody" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineBody"
+    },
+    "producesWine" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#producesWine",
+      "@type" : "@id"
+    },
+    "Wine" : {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Wine"
+    }
+  }
+}

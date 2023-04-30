@@ -1,0 +1,669 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasVintageYear"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineTaste"
+    }, {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#AcidityScore"
+    }, {
+      "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Wine"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasMaker"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Model wine quality based on reviews and description.\nhttps://www.kaggle.com/datasets/fedesoriano/spanish-wine-quality-dataset?resource=download"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Spanish Wine Ontology"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#AcidityScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acidity Scores"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AcidityScore"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Alvaro_Palacios",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Artadi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Bodegas_El_Nido",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#BodyScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Body Score"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BodyScore"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineBody"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#CountryOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Country of Origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CountryOrigin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Wine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Dominio_de_Pingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#El_Anejon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#El_Nido",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Jumilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#La_Rioja_Alta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#NumReviews",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Number of users that reviewed the wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NumReviews"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Ordonez",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pago_de_Carraovejas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pedro_Ximenez",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Price in euros"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Priorat_Red",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Priorato",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pucker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pucker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pucker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#AcidityScore"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tartness"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Red",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Region of the Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Ribera_del_Duero",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Rioja_Red",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Sierra_Cantabria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tartness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tartness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tartness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#AcidityScore"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Teso_La_Monja",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tinto",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toneles_Moscatel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toro_Albala",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toro_Red",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Unico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#UsersRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Average Rating Given to the Wine by the Users"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "UsersRating"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vega_Sicilia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vina_El_Pison",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vina_Sastre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vino_de_Espana",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vintage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Vintage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vintage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Year in Which the Grapes Were Harvested"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Wine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineBody",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Wine Body"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WineBody"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineTaste"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineDescriptor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Descriptor of the Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WineDescriptor"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Name of the Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WineName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#wine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineTaste",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Wine Taste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WineTaste"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineDescriptor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Type of the Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "WineType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineDescriptor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Winery Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_1931",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#bodyScoreValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#BodyScore"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bodyScoreValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasBody",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineBody"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasBody"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineBody"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasWineDescription"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasMaker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasMaker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#producesWine"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasWineDescription"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasVintageYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vintage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasVintageYear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasWineDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasWineDescriptor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineDescriptor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#locatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "locatedIn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#nearRegion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nearRegion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#priceValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "priceValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#producesWine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "producesWine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#puckerValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pucker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "puckerValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#ratingValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#UsersRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ratingValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#reviewValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#NumReviews"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "reviewValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#tartnessValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tartness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tartnessValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#wine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#yearValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "yearValue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#UsersRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+} ]

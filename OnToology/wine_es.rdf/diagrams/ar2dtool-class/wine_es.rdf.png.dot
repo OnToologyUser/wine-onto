@@ -1,0 +1,41 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; ":Winery" ":Price" "1f584199:187d263e4dd:-7ff8" ":WineDescriptor" ":AcidityScore" "1f584199:187d263e4dd:-7ffb" ":Pucker" ":Region" ":WineType" ":Tartness" ":WineTaste" ":Vintage" ":wine" ":UsersRating" ":NumReviews" ":WineBody" ":BodyScore" ":Wine" ":VintageYear" ; /*classes style*/
+	"NULL" -> ":AcidityScore" [ label = "rdf:first" ];
+	"NULL" -> ":Winery" [ label = "owl:allValuesFrom" ];
+	"NULL" -> ":WineType" [ label = "rdf:first" ];
+	"NULL" -> ":WineTaste" [ label = "rdf:first" ];
+	"NULL" -> ":hasMaker" [ label = "owl:onProperty" ];
+	"NULL" -> ":Wine" [ label = "rdf:first" ];
+	"NULL" -> "1f584199:187d263e4dd:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "1f584199:187d263e4dd:-7ff9" [ label = "rdf:rest" ];
+	"NULL" -> "1f584199:187d263e4dd:-7ffa" [ label = "owl:unionOf" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> ":hasVintageYear" [ label = "owl:onProperty" ];
+	"NULL" -> "1f584199:187d263e4dd:-7ff7" [ label = "owl:intersectionOf" ];
+	":tartnessValue" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	":hasBody" -> ":hasWineDescription" [ label = "rdfs:subPropertyOf" ];
+	":wine" -> "1f584199:187d263e4dd:-7ff8" [ label = "owl:equivalentClass" ];
+	":hasMaker" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	":Pucker" -> ":Tartness" [ label = "owl:disjointWith" ];
+	":WineDescriptor" -> "1f584199:187d263e4dd:-7ffb" [ label = "owl:equivalentClass" ];
+	":hasType" -> ":hasWineDescription" [ label = "rdfs:subPropertyOf" ];
+	":Tartness" -> "xsd:positiveInteger" [ label = ":tartnessValue" ];
+	":Winery" -> ":Winery" [ label = ":producesWine" ];
+	":Pucker" -> "xsd:positiveInteger" [ label = ":puckerValue" ];
+	"owl:Thing" -> ":Region" [ label = ":locatedIn" ];
+	":NumReviews" -> "xsd:positiveInteger" [ label = ":reviewValue" ];
+	":VintageYear" -> "xsd:positiveInteger" [ label = ":yearValue" ];
+	":Region" -> ":Region" [ label = ":nearRegion" ];
+	":Price" -> "xsd:float" [ label = ":priceValue" ];
+	":BodyScore" -> "xsd:positiveInteger" [ label = ":bodyScoreValue" ];
+	":Winery" -> ":Winery" [ label = ":hasMaker" ];
+	":Wine" -> ":WineDescriptor" [ label = ":hasWineDescription" ];
+	":UsersRating" -> "xsd:float" [ label = "owl:topDataProperty" ];
+	":Vintage" -> ":VintageYear" [ label = ":hasVintageYear" ];
+	":WineBody" -> ":WineBody" [ label = ":hasBody" ];
+	":WineType" -> ":WineType" [ label = ":hasType" ];
+	":UsersRating" -> "xsd:float" [ label = ":ratingValue" ];
+
+}
