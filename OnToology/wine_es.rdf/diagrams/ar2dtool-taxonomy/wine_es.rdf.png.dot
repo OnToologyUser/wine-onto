@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; ":WineName" ":CountryOrigin" ":WineDescriptor" ":AcidityScore" ":Pucker" ":WineType" ":Tartness" ":WineTaste" ":wine" ":WineBody" ":BodyScore" ":Wine" ; /*classes style*/
+	":BodyScore" -> ":WineBody" [ label = "rdfs:subClassOf" ];
+	":WineType" -> ":WineDescriptor" [ label = "rdfs:subClassOf" ];
+	":WineBody" -> ":WineTaste" [ label = "rdfs:subClassOf" ];
+	":Tartness" -> ":AcidityScore" [ label = "rdfs:subClassOf" ];
+	":WineTaste" -> ":WineDescriptor" [ label = "rdfs:subClassOf" ];
+	":WineName" -> ":wine" [ label = "rdfs:subClassOf" ];
+	":CountryOrigin" -> ":Wine" [ label = "rdfs:subClassOf" ];
+	":Pucker" -> ":AcidityScore" [ label = "rdfs:subClassOf" ];
+
+}

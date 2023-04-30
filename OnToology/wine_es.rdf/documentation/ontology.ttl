@@ -1,0 +1,471 @@
+@prefix : <http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#> .
+
+<http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es> rdf:type owl:Ontology ;
+                                                                 rdfs:comment """Model wine quality based on reviews and description.
+https://www.kaggle.com/datasets/fedesoriano/spanish-wine-quality-dataset?resource=download""" ;
+                                                                 rdfs:label "Spanish Wine Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasBody
+:hasBody rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasWineDescription ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain :WineBody ;
+         rdfs:range :WineBody ;
+         rdfs:label "hasBody" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasMaker
+:hasMaker rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          owl:inverseOf :producesWine ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Winery ;
+          rdfs:range :Winery ;
+          rdfs:label "hasMaker" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasType
+:hasType rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :hasWineDescription ;
+         rdf:type owl:FunctionalProperty ;
+         rdfs:domain :WineType ;
+         rdfs:range :WineType ;
+         rdfs:label "hasType" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasVintageYear
+:hasVintageYear rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Vintage ;
+                rdfs:range :VintageYear ;
+                rdfs:label "hasVintageYear" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#hasWineDescription
+:hasWineDescription rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Wine ;
+                    rdfs:range :WineDescriptor ;
+                    rdfs:label "hasWineDescriptor" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range :Region ;
+           rdfs:label "locatedIn" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#nearRegion
+:nearRegion rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            rdfs:domain :Region ;
+            rdfs:range :Region ;
+            rdfs:label "nearRegion" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#producesWine
+:producesWine rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain :Winery ;
+              rdfs:range :Winery ;
+              rdfs:label "producesWine" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#bodyScoreValue
+:bodyScoreValue rdf:type owl:DatatypeProperty ;
+                rdfs:domain :BodyScore ;
+                rdfs:range xsd:positiveInteger ;
+                rdfs:label "bodyScoreValue" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#priceValue
+:priceValue rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Price ;
+            rdfs:range xsd:float ;
+            rdfs:label "priceValue" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#puckerValue
+:puckerValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Pucker ;
+             rdfs:range xsd:positiveInteger ;
+             rdfs:label "puckerValue" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#ratingValue
+:ratingValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :UsersRating ;
+             rdfs:range xsd:float ;
+             rdfs:label "ratingValue" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#reviewValue
+:reviewValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :NumReviews ;
+             rdfs:range xsd:positiveInteger ;
+             rdfs:label "reviewValue" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#tartnessValue
+:tartnessValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Tartness ;
+               rdfs:range xsd:positiveInteger ;
+               rdfs:label "tartnessValue" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#yearValue
+:yearValue rdf:type owl:DatatypeProperty ;
+           rdfs:domain :VintageYear ;
+           rdfs:range xsd:positiveInteger ;
+           rdfs:label "yearValue" .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :UsersRating ;
+                    rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#AcidityScore
+:AcidityScore rdf:type owl:Class ;
+              rdfs:comment "Acidity Scores" ;
+              rdfs:label "AcidityScore" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#BodyScore
+:BodyScore rdf:type owl:Class ;
+           rdfs:subClassOf :WineBody ;
+           rdfs:comment "Body Score" ;
+           rdfs:label "BodyScore" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#CountryOrigin
+:CountryOrigin rdf:type owl:Class ;
+               rdfs:subClassOf :Wine ;
+               rdfs:comment "Country of Origin" ;
+               rdfs:label "CountryOrigin" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#NumReviews
+:NumReviews rdf:type owl:Class ;
+            rdfs:comment "Number of users that reviewed the wine" ;
+            rdfs:label "NumReviews" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Price
+:Price rdf:type owl:Class ;
+       rdfs:comment "Price in euros" ;
+       rdfs:label "Price" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pucker
+:Pucker rdf:type owl:Class ;
+        rdfs:subClassOf :AcidityScore ;
+        owl:disjointWith :Tartness ;
+        rdfs:comment "Pucker" ;
+        rdfs:label "Pucker" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Region
+:Region rdf:type owl:Class ;
+        rdfs:comment "Region of the Wine" ;
+        rdfs:label "Region" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tartness
+:Tartness rdf:type owl:Class ;
+          rdfs:subClassOf :AcidityScore ;
+          rdfs:comment "Tartness" ;
+          rdfs:label "Tartness" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#UsersRating
+:UsersRating rdf:type owl:Class ;
+             rdfs:comment "Average Rating Given to the Wine by the Users" ;
+             rdfs:label "UsersRating" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vintage
+:Vintage rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasVintageYear ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         rdfs:comment "Vintage" ;
+         rdfs:label "Vintage" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#VintageYear
+:VintageYear rdf:type owl:Class ;
+             rdfs:comment "Year in Which the Grapes Were Harvested" ;
+             rdfs:label "VintageYear" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Wine
+:Wine rdf:type owl:Class ;
+      rdfs:comment "Wine" ;
+      rdfs:label "Wine" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineBody
+:WineBody rdf:type owl:Class ;
+          rdfs:subClassOf :WineTaste ;
+          rdfs:comment "Wine Body" ;
+          rdfs:label "WineBody" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineDescriptor
+:WineDescriptor rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:unionOf ( :WineTaste
+                                                    :WineType
+                                                  )
+                                    ] ;
+                rdfs:comment "Descriptor of the Wine" ;
+                rdfs:label "WineDescriptor" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineName
+:WineName rdf:type owl:Class ;
+          rdfs:subClassOf :wine ;
+          rdfs:comment "Name of the Wine" ;
+          rdfs:label "WineName" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineTaste
+:WineTaste rdf:type owl:Class ;
+           rdfs:subClassOf :WineDescriptor ;
+           rdfs:comment "Wine Taste" ;
+           rdfs:label "WineTaste" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#WineType
+:WineType rdf:type owl:Class ;
+          rdfs:subClassOf :WineDescriptor ;
+          rdfs:comment "Type of the Wine" ;
+          rdfs:label "WineType" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Winery
+:Winery rdf:type owl:Class ;
+        rdfs:comment "Winery Name" ;
+        rdfs:label "Winery" .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#wine
+:wine rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :AcidityScore
+                                                 :Wine
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasMaker ;
+                        owl:allValuesFrom :Winery
+                      ] ;
+      rdfs:comment "wine" ;
+      rdfs:label "wine" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Alvaro_Palacios
+:Alvaro_Palacios rdf:type owl:NamedIndividual ,
+                          :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Artadi
+:Artadi rdf:type owl:NamedIndividual ,
+                 :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Bodegas_El_Nido
+:Bodegas_El_Nido rdf:type owl:NamedIndividual ,
+                          :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Dominio_de_Pingus
+:Dominio_de_Pingus rdf:type owl:NamedIndividual ,
+                            :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#El_Anejon
+:El_Anejon rdf:type owl:NamedIndividual ,
+                    :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#El_Nido
+:El_Nido rdf:type owl:NamedIndividual ,
+                  :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Jumilla
+:Jumilla rdf:type owl:NamedIndividual ,
+                  :Region .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#La_Rioja_Alta
+:La_Rioja_Alta rdf:type owl:NamedIndividual ,
+                        :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Ordonez
+:Ordonez rdf:type owl:NamedIndividual ,
+                  :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pago_de_Carraovejas
+:Pago_de_Carraovejas rdf:type owl:NamedIndividual ,
+                              :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pedro_Ximenez
+:Pedro_Ximenez rdf:type owl:NamedIndividual ,
+                        :WineType .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Pingus
+:Pingus rdf:type owl:NamedIndividual ,
+                 :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Priorat_Red
+:Priorat_Red rdf:type owl:NamedIndividual ,
+                      :WineType .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Priorato
+:Priorato rdf:type owl:NamedIndividual ,
+                   :Region .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Red
+:Red rdf:type owl:NamedIndividual ,
+              :WineType .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Ribera_del_Duero
+:Ribera_del_Duero rdf:type owl:NamedIndividual ,
+                           :Region .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Rioja_Red
+:Rioja_Red rdf:type owl:NamedIndividual ,
+                    :WineType .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Sierra_Cantabria
+:Sierra_Cantabria rdf:type owl:NamedIndividual ,
+                           :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Teso_La_Monja
+:Teso_La_Monja rdf:type owl:NamedIndividual ,
+                        :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Tinto
+:Tinto rdf:type owl:NamedIndividual ,
+                :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toneles_Moscatel
+:Toneles_Moscatel rdf:type owl:NamedIndividual ,
+                           :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toro
+:Toro rdf:type owl:NamedIndividual ,
+               :Region .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toro_Albala
+:Toro_Albala rdf:type owl:NamedIndividual ,
+                      :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Toro_Red
+:Toro_Red rdf:type owl:NamedIndividual ,
+                   :WineType .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Unico
+:Unico rdf:type owl:NamedIndividual ,
+                :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vega_Sicilia
+:Vega_Sicilia rdf:type owl:NamedIndividual ,
+                       :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vina_El_Pison
+:Vina_El_Pison rdf:type owl:NamedIndividual ,
+                        :WineName .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vina_Sastre
+:Vina_Sastre rdf:type owl:NamedIndividual ,
+                      :Winery .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Vino_de_Espana
+:Vino_de_Espana rdf:type owl:NamedIndividual ,
+                         :Region .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_1931
+:Year_1931 rdf:type owl:NamedIndividual ,
+                    :VintageYear .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2004
+:Year_2004 rdf:type owl:NamedIndividual ,
+                    :VintageYear .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2013
+:Year_2013 rdf:type owl:NamedIndividual ,
+                    :VintageYear .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2016
+:Year_2016 rdf:type owl:NamedIndividual ,
+                    :VintageYear .
+
+
+###  http://www.semanticweb.org/emsss777/ontologies/2023/3/wine_es#Year_2018
+:Year_2018 rdf:type owl:NamedIndividual ,
+                    :VintageYear .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
